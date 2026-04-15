@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stock Ticker App</title>
+</head>
+<body>
+    <h1>Stock Ticker Search</h1>
+
+    <form method="GET" action="/process">
+        <p>
+        <label for="searchTerm">Enter a company name or stock ticker:</label><br>
+        <input type="text" id="searchTerm" name="searchTerm">
+        </p>
+
+        <p>
+        <input type="radio" id="company" name="searchType" value="company" checked>
+        <label for="company">Company Name</label>
+
+        <input type="radio" id="ticker" name="searchType" value="ticker">
+        <label for="ticker">Ticker Symbol</label>
+        </p>
+
+        <p>
+        <input type="submit" value="Search">
+        </p>
+    </form>
+</body>
+</html>
