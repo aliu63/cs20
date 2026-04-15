@@ -4,6 +4,7 @@ const url = require("url");
 const { MongoClient } = require("mongodb");
 
 const connectionString = "mongodb://User:cs20password@ac-j9kpigt-shard-00-00.qkslo9b.mongodb.net:27017,ac-j9kpigt-shard-00-01.qkslo9b.mongodb.net:27017,ac-j9kpigt-shard-00-02.qkslo9b.mongodb.net:27017/?ssl=true&replicaSet=atlas-spussk-shard-0&authSource=admin&appName=CS20Spring";
+const port = process.env.PORT || 3000;
 
 http.createServer(async function (req, res) {
     const qobj = url.parse(req.url, true);
@@ -78,7 +79,6 @@ http.createServer(async function (req, res) {
         res.write("<h1>Page not found</h1>");
         res.end();
     }
-const port = process.env.PORT || 3000;
 }).listen(port);
 
 console.log("Server running at http://localhost:3000/");
